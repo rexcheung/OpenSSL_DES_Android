@@ -15,7 +15,7 @@
 * 依赖库OpenSSL的so文件已经生成好，放在jniLibs下面: 包含了主流的arm架构文件，但没有x86结构的，因为不常用，生成OpenSSL for Android的so库可以参考文章底部的链接。
 
 
-##### 依赖及参考项目：
+##### 参考资料：
 [OpenSSL](https://www.openssl.org/)     
 [OpenSSL Android 编译](https://wiki.openssl.org/index.php/Android)  
 [Openssl Android 编译示例](http://blog.csdn.net/bupt073114/article/details/44565965)
