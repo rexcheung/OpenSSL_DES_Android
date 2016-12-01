@@ -2,7 +2,7 @@
 #### 基于OpenSSL, 在Android实现DES加密   
 * 加密方式：DES/CBC/PKCS5Padding    
 
-* 经过一段时间折腾及了解加密的原理后，发现原来是直接使用OpenSSL的补位不是PKCS5Padding格式，这个部分需要自己实现。
+* OpenSSL默认的补位不是PKCS5Padding格式，这个部分需要自己实现。
 
 * 加密及解密的主要逻辑在logic/des_logic.c这个类里面。
 
