@@ -11,8 +11,9 @@
 * 解密 EncryUtils.encryToBase64(msg, key);
 
 #### 关于so:
-* OpenSSL的so文件已经生成好，放在jniLibs下面: 包含了主流的arm架构文件，但没有x86结构的，因为不常用，生成OpenSSL for Android的so库可以参考文章底部的链接。
-* 编译so的命令已经写成了脚本， main/jniSource/makeso.sh，修改里面的第一行的NDK路径即可
+* C代码编译的命令已经写成了脚本， main/jniSource/makeso.sh，修改里面的第一行的NDK路径即可
+* 依赖库OpenSSL的so文件已经生成好，放在jniLibs下面: 包含了主流的arm架构文件，但没有x86结构的，因为不常用，生成OpenSSL for Android的so库可以参考文章底部的链接。
+
 
 ##### 依赖及参考项目：
 [OpenSSL](https://www.openssl.org/)     
