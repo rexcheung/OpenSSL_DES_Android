@@ -1,0 +1,52 @@
+
+if (false) {
+    apply plugin: 'com.android.model.library'
+    model {
+        android {
+            compileSdkVersion 22
+            buildToolsVersion "24.0.3"
+
+            defaultConfig {
+                minSdkVersion.apiLevel 14
+                targetSdkVersion.apiLevel 22
+                versionCode 1
+                versionName "1"
+            }
+
+            //NDK编译时需注掉
+            ndk {
+                moduleName = "openssl-jni"
+                platformVersion = 24
+                ldFlags.add("-llog")
+                ldFlags.add("-lcrypto")
+    //            ldFlags.add("-lcrypto_hw")
+    //            ldFlags.add("-lcrypto2_hw")
+
+    //            ldFlags.add("-lssl")
+    //            ldFlags.add("-lssl2")
+                abiFilters.add("armeabi-v7a")
+            }
+        }
+    }
+} else {
+    apply plugin: 'com.android.library'
+    android {
+        compileSdkVersion 22
+        buildToolsVersion "24.0.3"
+
+        defaultConfig {
+            minSdkVersion 14
+            targetSdkVersion  22
+            versionCode 1
+            versionName "1"
+        }
+    }
+}
+
+
+
+
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:22.2.0'
+}

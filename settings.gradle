@@ -1,0 +1,4 @@
+include ':app'
+
+include ':cryptolibs'
+project(':cryptolibs').projectDir = new File('app/librarys/cryptolibs')
